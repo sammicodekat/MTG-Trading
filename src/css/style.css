@@ -11,14 +11,10 @@ body{
 .body{
   background-color: black;
 }
-body{
-  background-color: black;
-}
-
-.btn-black {
-  background-color: black;
-}
 .center{
   text-align: center;
   align-content: center;
+}
+.detail{
+  /*background-image: url(../img/background1.png);*/
 }

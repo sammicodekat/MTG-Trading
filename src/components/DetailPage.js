@@ -44,7 +44,7 @@ export default class DetailPage extends Component {
     }
 
     return (
-      <div className='container center'>
+      <div className='container center detail'>
       <h3>{Name}</h3>
       <img src={imageUrl} alt={Name}/>
 

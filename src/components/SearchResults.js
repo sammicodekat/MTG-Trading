@@ -41,7 +41,7 @@ export default class SearchResults extends Component {
         let { name, multiverseid, imageUrl, id } = card;
         if(name&&multiverseid&&imageUrl&&id){
         return (
-          <button key={id} onClick={this._selectCard.bind(null, multiverseid)} className="btn btn-default btn-black">
+          <button key={id} onClick={this._selectCard.bind(null, multiverseid)} className="btn btn-default black">
             <img src={imageUrl} alt={name}/>
           </button>
         )
