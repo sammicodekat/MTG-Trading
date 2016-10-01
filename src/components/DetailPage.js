@@ -8,7 +8,7 @@ export default class DetailPage extends Component {
     this.state = {
       card: DetailStore.getCard()
     }
-    this._onChange=this._onChange.bind(this);    
+    this._onChange=this._onChange.bind(this);
   }
 
   componentWillMount() {
@@ -44,7 +44,7 @@ export default class DetailPage extends Component {
     }
 
     return (
-      <div className='container'>
+      <div className='container center'>
       <h3>{Name}</h3>
       <img src={imageUrl} alt={Name}/>
 

@@ -17,6 +17,7 @@ export default class SearchForm extends Component {
 
   render() {
     return (
+      <div className="center">
       <form className="form-inline" onSubmit = {this._submitForm}>
         <div className="form-group">
             <label className="sr-only" >Search by Card Names</label>
@@ -24,6 +25,7 @@ export default class SearchForm extends Component {
         </div>
         <button type="submit" className="btn btn-default">Search</button>
       </form>
+      </div>
     )
   }
 }

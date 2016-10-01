@@ -1,3 +1,17 @@
 table.table.table-hover tr{
   cursor :pointer;
 }
+.body{
+  background-color: black;
+}
+body{
+  background-color: black;
+}
+
+.btn-black {
+  background-color: black;
+}
+.center{
+  text-align: center;
+  align-content: center;
+}
