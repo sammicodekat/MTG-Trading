@@ -12,15 +12,15 @@ class DeckStore extends EventEmitter {
     AppDispatcher.register(action => {
       switch(action.type) {
         case 'ADD_CARD':
-        _deck.push(action.payload.card);
-        console.log('deck in store:', _deck)
-        this.emit('CHANGE');
-        break;
+          _deck.push(action.payload.card);
+          console.log('deck in store:', _deck)
+          this.emit('CHANGE');
+          break;
         case 'DELETE_CARD':
-        let {id} = action.payload;
-        _deck =_deck.filter( card => card.card.multiverseid !== id);
-        this.emit('CHANGE');
-        break;
+          let { id } = action.payload;
+          _deck =_deck.filter( card => card.card.uuid !== id);
+          this.emit('CHANGE');
+          break;
       }
     })
     this.on('CHANGE',() => {
