@@ -14,7 +14,7 @@ module.exports = {
     historyApiFallback:true,
     port:8000
   },
-  output: { path: './build', publicPath: '/build/', filename: 'bundle.js' },
+  output: { path: './build', publicPath: './build/', filename: 'bundle.js' },
   module: {
     loaders: [
       {
