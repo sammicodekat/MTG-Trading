@@ -45,7 +45,7 @@ export default class Deck extends Component {
       Cards = deck.map(card => {
         let { name, multiverseid, imageUrl, id } = card.card;
         return (
-          <div key={id} className = "col-sm-4" >
+          <div key={id} className = "col-sm-3 col-md-3 col-lg-3" >
           <div className = "innerbox">
             <button onClick={this._selectCard.bind(null, multiverseid)} className="btn btn-default black">
               <img src={imageUrl} alt={name} className="card-image"/>
