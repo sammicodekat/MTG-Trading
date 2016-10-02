@@ -1,7 +1,8 @@
 import { EventEmitter } from 'events';
 import AppDispatcher from '../AppDispatcher'
+import Storage from '../Storage';
 
-let _deck = [];
+let _deck = Storage.read('deck') || [];
 
 
 class DeckStore extends EventEmitter {
@@ -22,6 +23,9 @@ class DeckStore extends EventEmitter {
         break;
       }
     })
+    this.on('CHANGE',() => {
+      Storage.write('deck',_deck);
+    })
   }
 
   startListening(cb){
@@ -37,4 +41,4 @@ class DeckStore extends EventEmitter {
   }
 }
 
-export default new DeckStore;
+export default new DeckStore();

@@ -35,7 +35,6 @@ export default class DetailPage extends Component {
   }
 
   render() {
-    console.log('card:', this.state.card);
     let { card } = this.state;
     let Name, imageUrl, type, power, toughness, rarity, setName , text, color, colorStr= '';
 
@@ -57,11 +56,13 @@ export default class DetailPage extends Component {
 
     return (
       <div className='container center detail'>
+      <div>
         <h3>{Name}</h3>
+        <div className ="col-xs-6 card card-container">
         <img src={imageUrl} alt={Name}/>
-
-        <Link  to='/deck' className="btn btn-default" onClick={this.addToDeck}>Add to Deck</Link>
-
+        <Link  to='/deck' className="btn btn-default button" onClick={this.addToDeck}>Add to Deck</Link>
+        </div>
+        <div className ="col-xs-6 card card-container des">
         <ul>
           <li>Type: {type}</li>
           <li>Power and Toughness: {power}/{toughness}</li>
@@ -70,7 +71,8 @@ export default class DetailPage extends Component {
           <li>Set: {setName}</li>
           <li>{text}</li>
         </ul>
-
+        </div>
+      </div>
       </div>
     )
   }
