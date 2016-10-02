@@ -50,29 +50,29 @@ export default class DetailPage extends Component {
       text = card.card.text
       color = card.card.colors;
       if(color){
-      color.length == 1 ? (colorStr=color[0]): (colorStr=color[0]+'/'+color[1]);
-    }
+        color.length == 1 ? (colorStr=color[0]): (colorStr=color[0]+'/'+color[1]);
+      }
     }
 
     return (
-      <div className='container center detail'>
-      <div>
-        <h3>{Name}</h3>
-        <div className ="col-xs-6 card card-container">
-        <img src={imageUrl} alt={Name}/>
-        <Link  to='/deck' className="btn btn-default button" onClick={this.addToDeck}>Add to Deck</Link>
+      <div className='container center'>
+        <div className ="detail">
+          <h3 className ="title" >{Name}</h3>
+          <div className ="col-xs-6 card card-container">
+            <img src={imageUrl} alt={Name}/>
+            <Link  to='/deck' className="btn btn-default button" onClick={this.addToDeck}>Add to Deck</Link>
+          </div>
+          <div className ="col-xs-6 card card-container des">
+            <ul className ="list-group">
+              <li className = "list-group-item"><b>Type:</b> {type}</li>
+              <li className = "list-group-item"><b>Power and Toughness:</b> {power}/{toughness}</li>
+              <li className = "list-group-item"><b>Colors: </b>{colorStr}</li>
+              <li className = "list-group-item"><b>Rarity: </b>{rarity}</li>
+              <li className = "list-group-item"><b>Set: </b>{setName}</li>
+              <li className = "list-group-item">{text}</li>
+            </ul>
+          </div>
         </div>
-        <div className ="col-xs-6 card card-container des">
-        <ul>
-          <li>Type: {type}</li>
-          <li>Power and Toughness: {power}/{toughness}</li>
-          <li>Colors: {colorStr}</li>
-          <li>Rarity: {rarity}</li>
-          <li>Set: {setName}</li>
-          <li>{text}</li>
-        </ul>
-        </div>
-      </div>
       </div>
     )
   }

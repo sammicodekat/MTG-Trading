@@ -26,12 +26,11 @@ export default class Layout extends Component {
               <ul className="nav navbar-nav">
                 <li role="presentation" className={classNames({active: path === '/search'})}><Link to ='/search'>Search</Link></li>
                 <li role="presentation" className={classNames({active: path === '/deck'})}><Link to ='/deck'>Deck</Link></li>
-
               </ul>
             </div>
           </div>
         </nav>
-        <div><img src={"src/img/logo.png"} /></div>
+        <div><img src={"//dl.dropboxusercontent.com/s/od20e4ek1vgsywp/logo.png?dl=0"} /></div>
         {this.props.children}
       </div>
     )

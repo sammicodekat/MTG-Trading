@@ -1,10 +1,8 @@
 import { EventEmitter } from 'events';
 import AppDispatcher from '../AppDispatcher'
-
 import uuid from 'uuid'
 
 let _card = null;
-
 
 class DetailStore extends EventEmitter {
   constructor(){
