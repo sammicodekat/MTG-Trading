@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import SearchStore from '../stores/SearchResultStore'
-import {browserHistory} from 'react-router'
+import { browserHistory } from 'react-router'
 
 export default class SearchResults extends Component {
   constructor() {
@@ -27,22 +27,21 @@ export default class SearchResults extends Component {
   }
 
   _selectCard(id){
-    console.log(id);
     browserHistory.push(`/detail/${id}`);
   }
 
   render() {
     let {cards} = this.state;
-    let name='';
-    let Cards='';
-    if(cards) {
+    let name = '';
+    let Cards = '';
+    if (cards) {
 
       Cards = cards.cards.map(card => {
         let { name, multiverseid, imageUrl, id } = card;
-        if(name&&multiverseid&&imageUrl&&id){
+        if(name && multiverseid && imageUrl && id) {
         return (
           <button key={id} onClick={this._selectCard.bind(null, multiverseid)} className="btn btn-default black">
-            <img src={imageUrl} alt={name}/>
+            <img src={imageUrl} alt={name} className="card-image"/>
           </button>
         )
       }

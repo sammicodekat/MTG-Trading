@@ -18,3 +18,8 @@ body{
 .detail{
   /*background-image: url(../img/background1.png);*/
 }
+
+.card-image {
+  height: 311px;
+  width: 226px;
+}

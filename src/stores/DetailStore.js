@@ -1,4 +1,4 @@
-import {EventEmitter} from 'events';
+import { EventEmitter } from 'events';
 import AppDispatcher from '../AppDispatcher'
 
 let _card = null;
@@ -11,7 +11,7 @@ class DetailStore extends EventEmitter {
     AppDispatcher.register(action => {
       switch(action.type) {
         case 'RECEIVE_DETAIL':
-        _card =action.payload.card;
+        _card = action.payload.card;
         this.emit('CHANGE');
         break;
       }
