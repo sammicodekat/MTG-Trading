@@ -1,6 +1,8 @@
 import { EventEmitter } from 'events';
 import AppDispatcher from '../AppDispatcher'
 
+import uuid from 'uuid'
+
 let _card = null;
 
 
@@ -12,6 +14,8 @@ class DetailStore extends EventEmitter {
       switch(action.type) {
         case 'RECEIVE_DETAIL':
         _card = action.payload.card;
+        _card.card.uuid = uuid();
+        console.log('card in store', _card);
         this.emit('CHANGE');
         break;
       }
