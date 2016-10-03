@@ -27,7 +27,7 @@ export default class Deck extends Component {
     })
   }
   _selectCard(id){
-    browserHistory.push(`/detail/${id}`);
+    browserHistory.push(`/mtg/detail/${id}`);
   }
 
   _deleteCard(id){

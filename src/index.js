@@ -9,7 +9,7 @@ import BrowseCards from './components/BrowseCards'
 
 render(
   <Router history ={browserHistory}>
-    <Route path = '/' component={Layout}>
+    <Route path = '/mtg/' component={Layout}>
       <IndexRoute component={BrowseCards}/>
 
       <Route path = '/search' component={SearchPage}/>

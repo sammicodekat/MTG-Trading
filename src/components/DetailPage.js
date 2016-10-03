@@ -86,7 +86,7 @@ export default class DetailPage extends Component {
 
           <div className ="col-xs-6 card card-container">
             <img src={imageUrl} alt={Name}/>
-            <Link  to='/deck' className="btn btn-default button" onClick={this.addToDeck}>Add to Deck</Link>
+            <Link  to='/mtg/deck' className="btn btn-default button" onClick={this.addToDeck}>Add to Deck</Link>
             <a href={url} target="_blank"><img src="https://1.bp.blogspot.com/-xXJU6yWkjkM/V14WGAKkAVI/AAAAAAAAIMw/mh1ykJweeBodMLUEcL_BxIcUNE860_NCQCLcB/s1600/amazon-buy-button-png1.png" className="amazon" alt="Buy on Amazon"/></a>
           </div>
           <div className ="col-xs-6 card card-container des">
@@ -99,7 +99,7 @@ export default class DetailPage extends Component {
                 {costNum.map((num, i) => {return (<span key ={i} className="btn btn-default btn-sm" disabled>{num}</span> )})}
                 {costImg.map((img, i) => {return (<img className = "cost" src={img} key={i}/> )})}
               </li>
-              
+
               <li className = "list-group-item"><b>Colors: </b>{colorStr}</li>
               <li className = "list-group-item"><b>Rarity: </b>{rarity}</li>
               <li className = "list-group-item"><b>Set: </b>{setName}</li>

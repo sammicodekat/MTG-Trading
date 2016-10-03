@@ -20,12 +20,12 @@ export default class Layout extends Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <div className="navbar-brand"><Link to ='/'>MTG</Link></div>
+              <div className="navbar-brand"><Link to ='/mtg/'>MTG</Link></div>
             </div>
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
-                <li role="presentation" className={classNames({active: path === '/search'})}><Link to ='/search'>Search</Link></li>
-                <li role="presentation" className={classNames({active: path === '/deck'})}><Link to ='/deck'>Deck</Link></li>
+                <li role="presentation" className={classNames({active: path === '/search'})}><Link to ='/mtg/search'>Search</Link></li>
+                <li role="presentation" className={classNames({active: path === '/deck'})}><Link to ='/mtg//deck'>Deck</Link></li>
               </ul>
             </div>
 

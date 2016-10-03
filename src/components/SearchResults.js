@@ -27,7 +27,7 @@ export default class SearchResults extends Component {
   }
 
   _selectCard(id){
-    browserHistory.push(`/detail/${id}`);
+    browserHistory.push(`/mtg/detail/${id}`);
   }
 
   render() {
