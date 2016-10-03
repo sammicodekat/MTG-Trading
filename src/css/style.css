@@ -78,3 +78,14 @@ h3{
 .list-group{
   opacity: 0.5;
 }
+
+.amazon {
+  max-width: 100px;
+  height: auto;
+}
+.cost{
+  max-width: 29px;
+}
+.btn-sm{
+  border-radius: 100%;
+}
