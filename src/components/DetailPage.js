@@ -56,7 +56,7 @@ export default class DetailPage extends Component {
 
     return (
       <div className='container center'>
-        <div className ="detail">
+        <div className ="detail row">
           <h3 className ="title" >{Name}</h3>
           <div className ="col-xs-6 card card-container">
             <img src={imageUrl} alt={Name}/>
@@ -64,7 +64,7 @@ export default class DetailPage extends Component {
           </div>
           <div className ="col-xs-6 card card-container des">
             <ul className ="list-group">
-              <li className = "list-group-item"><b>Type:</b> {type}</li>
+              <li className = "list-group-item"><b>Type: </b>{type}</li>
               <li className = "list-group-item"><b>Power and Toughness:</b> {power}/{toughness}</li>
               <li className = "list-group-item"><b>Colors: </b>{colorStr}</li>
               <li className = "list-group-item"><b>Rarity: </b>{rarity}</li>
