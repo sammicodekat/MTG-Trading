@@ -21,7 +21,7 @@ export default class SearchForm extends Component {
       <form className="form-inline" onSubmit = {this._submitForm}>
         <div className="form-group">
             <label className="sr-only" >Search by Card Names</label>
-            <input ref ='name' type="text" className="form-control"  placeholder="Chandra"/>
+            <input ref ='name' type="text" className="form-control"  placeholder="Card Name"/>
         </div>
         <button type="submit" className="btn btn-default">Search</button>
       </form>

@@ -36,7 +36,7 @@ export default class BrowseCards extends Component {
   }
 
   _getCards(){
-    let {page} = this.state;
+    let { page } = this.state;
     CardActions.getCardList(page);
   }
 

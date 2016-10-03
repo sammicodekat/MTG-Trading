@@ -39,4 +39,5 @@ class SearchStore extends EventEmitter {
     return _cardList;
   }
 }
+
 export default new SearchStore;

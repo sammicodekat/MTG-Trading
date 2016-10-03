@@ -39,16 +39,17 @@ export default class SearchResults extends Component {
       Cards = cards.cards.map(card => {
         let { name, multiverseid, imageUrl, id } = card;
         if(name && multiverseid && imageUrl && id) {
-        return (
-          <button key={id} onClick={this._selectCard.bind(null, multiverseid)} className="btn btn-default black">
-            <img src={imageUrl} alt={name} className="card-image"/>
-          </button>
-        )
-      }
+          return (
+            <button key={id} onClick={this._selectCard.bind(null, multiverseid)} className="btn btn-default black">
+              <img src={imageUrl} alt={name} className="card-image"/>
+            </button>
+          )
+        }
       })
     }
+
     return (
-      <div className='container black'>
+      <div>
         {Cards}
       </div>
     )

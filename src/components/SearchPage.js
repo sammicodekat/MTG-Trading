@@ -9,13 +9,13 @@ export default class SearchPage extends Component {
 
   render() {
     return (
-      <div className='container'>
-      <div className='row'>
-      <SearchForm />
-      </div>
-      <div className="row">
-      <SearchResults />
-      </div>
+      <div>
+        <div className='row'>
+          <SearchForm />
+        </div>
+        <div className="row">
+          <SearchResults />
+        </div>
       </div>
     )
   }

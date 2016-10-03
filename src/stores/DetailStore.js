@@ -13,7 +13,7 @@ class DetailStore extends EventEmitter {
         case 'RECEIVE_DETAIL':
         _card = action.payload.card;
         _card.card.uuid = uuid();
-        console.log('card in store', _card);
+        // console.log('card in store', _card);
         this.emit('CHANGE');
         break;
       }

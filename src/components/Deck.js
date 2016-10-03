@@ -27,7 +27,6 @@ export default class Deck extends Component {
     })
   }
   _selectCard(id){
-    console.log(id);
     browserHistory.push(`/detail/${id}`);
   }
 
@@ -36,7 +35,7 @@ export default class Deck extends Component {
   }
 
   render() {
-    console.log('deck', this.state.deck);
+    // console.log('deck', this.state.deck);
     let {deck} = this.state;
     let name='';
     let Cards='';
@@ -58,7 +57,7 @@ export default class Deck extends Component {
     }
 
     return (
-      <div className='container black inline'>{Cards}</div>
+      <div className='inline'>{Cards}</div>
     )
   }
 }
