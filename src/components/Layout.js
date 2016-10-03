@@ -10,9 +10,9 @@ export default class Layout extends Component {
   render() {
     let path = this.props.location.pathname;
     return (
-      <div className='center'>
+      <div className="container-fluid">
         <nav className="navbar navbar-inverse">
-          <div className="container-fluid">
+
             <div className="navbar-header">
               <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span className="sr-only">Toggle navigation</span>
@@ -28,10 +28,12 @@ export default class Layout extends Component {
                 <li role="presentation" className={classNames({active: path === '/deck'})}><Link to ='/deck'>Deck</Link></li>
               </ul>
             </div>
-          </div>
+
         </nav>
-        <div><img src={"//dl.dropboxusercontent.com/s/od20e4ek1vgsywp/logo.png?dl=0"} /></div>
+        <div className='center'><img src={"//dl.dropboxusercontent.com/s/od20e4ek1vgsywp/logo.png?dl=0"} /></div>
+        <div className='center'>
         {this.props.children}
+      </div>
       </div>
     )
   }
