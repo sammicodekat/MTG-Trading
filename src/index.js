@@ -12,9 +12,9 @@ render(
     <Route path = '/mtg/' component={Layout}>
       <IndexRoute component={BrowseCards}/>
 
-      <Route path = '/search' component={SearchPage}/>
-      <Route path = '/detail/:id' component={DetailPage}/>
-      <Route path = '/deck' component={Deck}/>
+      <Route path = 'search' component={SearchPage}/>
+      <Route path = 'detail/:id' component={DetailPage}/>
+      <Route path = 'deck' component={Deck}/>
 
     </Route>
   </Router>,

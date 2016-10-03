@@ -25,7 +25,7 @@ export default class Layout extends Component {
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav">
                 <li role="presentation" className={classNames({active: path === '/search'})}><Link to ='/mtg/search'>Search</Link></li>
-                <li role="presentation" className={classNames({active: path === '/deck'})}><Link to ='/mtg//deck'>Deck</Link></li>
+                <li role="presentation" className={classNames({active: path === '/deck'})}><Link to ='/mtg/deck'>Deck</Link></li>
               </ul>
             </div>
 

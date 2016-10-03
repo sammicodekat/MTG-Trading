@@ -53,7 +53,7 @@ export default class DetailPage extends Component {
       flavor = card.card.flavor;
       artist = card.card.artist;
       cost = card.card.manaCost;
-      url = `https://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=mtg+${Name.split(' ').join('+')}`;
+      url = `//www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=mtg+${Name.split(' ').join('+')}`;
 
       if(color){
         color.length == 1 ? (colorStr=color[0]): (colorStr=color[0]+'/'+color[1]);
@@ -62,15 +62,15 @@ export default class DetailPage extends Component {
       if (cost) {
         cost.split("").forEach( letter => {
           if (letter === "G"){
-            costImg.push('http://vignette3.wikia.nocookie.net/mtg/images/f/f7/Mana_G.png/revision/latest?cb=20130604114032');
+            costImg.push('//vignette3.wikia.nocookie.net/mtg/images/f/f7/Mana_G.png/revision/latest?cb=20130604114032');
           } else if(letter === "W"){
-            costImg.push("http://vignette4.wikia.nocookie.net/mtg/images/d/da/Mana_W.png/revision/latest?cb=20130604114009");
+            costImg.push("//vignette4.wikia.nocookie.net/mtg/images/d/da/Mana_W.png/revision/latest?cb=20130604114009");
           } else if(letter === "B"){
-            costImg.push("http://vignette2.wikia.nocookie.net/mtg/images/a/a6/Mana_B.png/revision/latest?cb=20130604114019");
+            costImg.push("//vignette2.wikia.nocookie.net/mtg/images/a/a6/Mana_B.png/revision/latest?cb=20130604114019");
           } else if(letter === "U"){
-            costImg.push("http://vignette2.wikia.nocookie.net/mtg/images/a/a8/Mana_U.png/revision/latest?cb=20130604114015");
+            costImg.push("//vignette2.wikia.nocookie.net/mtg/images/a/a8/Mana_U.png/revision/latest?cb=20130604114015");
           } else if(letter === "R"){
-            costImg.push("http://www.slightlymagic.net/forum/download/file.php?id=12830");
+            costImg.push("//www.slightlymagic.net/forum/download/file.php?id=12830");
           } else if (letter !== "{" && letter !== "}" && letter !== "/"){
             costNum.push(letter);
           }
@@ -87,7 +87,7 @@ export default class DetailPage extends Component {
           <div className ="col-xs-6 card card-container">
             <img src={imageUrl} alt={Name}/>
             <Link  to='/mtg/deck' className="btn btn-default button" onClick={this.addToDeck}>Add to Deck</Link>
-            <a href={url} target="_blank"><img src="https://1.bp.blogspot.com/-xXJU6yWkjkM/V14WGAKkAVI/AAAAAAAAIMw/mh1ykJweeBodMLUEcL_BxIcUNE860_NCQCLcB/s1600/amazon-buy-button-png1.png" className="amazon" alt="Buy on Amazon"/></a>
+            <a href={url} target="_blank"><img src="//1.bp.blogspot.com/-xXJU6yWkjkM/V14WGAKkAVI/AAAAAAAAIMw/mh1ykJweeBodMLUEcL_BxIcUNE860_NCQCLcB/s1600/amazon-buy-button-png1.png" className="amazon" alt="Buy on Amazon"/></a>
           </div>
           <div className ="col-xs-6 card card-container des">
             <ul className ="list-group">
